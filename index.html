@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách quyền riêng tư - Tủ Hóa Đơn</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #475569;
+      --primary: #0f766e;
+      --border: #e2e8f0;
+    }
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: var(--primary);
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    p, li {
+      color: var(--muted);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chính sách quyền riêng tư — Tủ Hóa Đơn</h1>
+    <div class="meta">
+      <strong>Ứng dụng:</strong> Tủ Hóa Đơn (<code>com.aistudio.sobaohanh.kvnxqp</code>)<br>
+      <strong>Nhà phát triển:</strong> Phạm Minh<br>
+      <strong>Cập nhật lần cuối:</strong> 23/11/2026
+    </div>
+
+    <p>
+      Chính sách quyền riêng tư này mô tả cách ứng dụng <strong>Tủ Hóa Đơn</strong> thu thập, sử dụng và bảo vệ thông tin của bạn khi sử dụng ứng dụng trên thiết bị di động.
+    </p>
+
+    <h2>1. Dữ liệu ứng dụng thu thập</h2>
+    <ul>
+      <li><strong>Thông tin hóa đơn và bảo hành do bạn chủ động lưu trữ:</strong> tên sản phẩm, model/serial/IMEI, ngày mua, thời hạn bảo hành, tên cửa hàng, số điện thoại cửa hàng, ghi chú và hình ảnh hóa đơn/tem bảo hành.</li>
+      <li><strong>Thông tin tài khoản Google (nếu bạn chọn đăng nhập):</strong> tên hiển thị, địa chỉ email, mã định danh người dùng (UID) và ảnh đại diện nhằm phục vụ tính năng đồng bộ đám mây.</li>
+      <li><strong>Dữ liệu quảng cáo kỹ thuật:</strong> mã định danh quảng cáo thiết bị (Advertising ID) được thu thập tự động bởi Google AdMob để hiển thị và đo lường quảng cáo.</li>
+    </ul>
+
+    <h2>2. Mục đích sử dụng dữ liệu</h2>
+    <ul>
+      <li>Lưu trữ, phân loại và đếm ngược thời hạn bảo hành cho các sản phẩm cá nhân trên thiết bị của bạn.</li>
+      <li>Khi bạn chụp hoặc chọn ảnh hóa đơn để quét tự động, hình ảnh được gửi tạm thời đến dịch vụ <strong>Gemini AI (Google)</strong> để trích xuất văn bản và điền vào biểu mẫu.</li>
+      <li>Đồng bộ hóa dữ liệu hóa đơn và hình ảnh lên <strong>Firebase Cloud Firestore</strong> theo đúng tài khoản Google của bạn để tránh mất dữ liệu khi đổi thiết bị.</li>
+      <li>Hiển thị quảng cáo từ <strong>Google AdMob</strong> để duy trì ứng dụng miễn phí.</li>
+    </ul>
+
+    <h2>3. Quyền truy cập thiết bị</h2>
+    <ul>
+      <li><strong>Camera &amp; Thư viện ảnh:</strong> chỉ sử dụng khi bạn chủ động nhấn chụp ảnh hoặc chọn ảnh hóa đơn/sản phẩm.</li>
+      <li><strong>Thông báo (Notifications):</strong> chỉ sử dụng để gửi thông báo nhắc lịch khi sản phẩm sắp hết hạn bảo hành (30 ngày, 7 ngày, 1 ngày, ngày hết hạn).</li>
+    </ul>
+
+    <h2>4. Dịch vụ bên thứ ba</h2>
+    <p>Ứng dụng sử dụng các dịch vụ đáng tin cậy của Google bao gồm:</p>
+    <ul>
+      <li>Google Firebase Authentication &amp; Cloud Firestore</li>
+      <li>Google Gemini AI (Firebase AI Logic)</li>
+      <li>Google AdMob</li>
+    </ul>
+
+    <h2>5. Bảo mật và không chia sẻ thương mại</h2>
+    <p>
+      Dữ liệu đồng bộ đám mây được phân tách riêng theo mã tài khoản (UID) và bảo vệ bằng quy tắc bảo mật Firebase Security Rules. Chúng tôi không bán, cho thuê hay trao đổi dữ liệu hóa đơn cá nhân của bạn cho bên thứ ba.
+    </p>
+
+    <h2>6. Quyền kiểm soát và xóa dữ liệu của bạn</h2>
+    <p>
+      Bạn có toàn quyền chỉnh sửa hoặc xóa từng hóa đơn trực tiếp trong ứng dụng (dữ liệu sẽ được xóa đồng thời trên thiết bị và trên đám mây). Bạn cũng có thể đăng xuất hoặc yêu cầu xóa toàn bộ dữ liệu tài khoản bất kỳ lúc nào bằng cách liên hệ email hỗ trợ bên dưới.
+    </p>
+
+    <h2>7. Liên hệ</h2>
+    <p>
+      Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào liên quan đến quyền riêng tư và dữ liệu cá nhân, vui lòng liên hệ:<br>
+      Email: <a href="mailto:phamhoangbaominh2005@gmail.com">phamhoangbaominh2005@gmail.com</a>
+    </p>
+  </div>
+</body>
+</html>
